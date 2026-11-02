@@ -16,14 +16,16 @@ body{
 
 /* Navigation_bar */
 .navbar {
-    position: sticky;
+    position:sticky;
+    top: 0;
     width:100%;
     height:90px;
     display:flex;
     justify-content:space-around;
     align-items:center;
-    background-color: white;
-    box-shadow: 0px -5px 20px rgb(49, 49, 49);
+    background-color: rgba(255, 255, 255);
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.4);
+    z-index: 100;
 }
 
 .navbar .nav-logo img{
@@ -85,7 +87,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 30px;
+    padding: 45px 0 0;
    
 }
 
@@ -95,7 +97,7 @@ body{
 }
 
 .bunner-text h1{
-    color:goldenrod;
+    color:rgb(234, 176, 28);
     font-size: 45px;
     font-weight: bold;
 }
@@ -112,19 +114,187 @@ body{
 }
 
 .bunner-text .our-package{
+    font-size: 18px;
     display: inline-block;
     margin-top: 15px;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 13px 25px;
     background-color:rgb(2, 4, 116);
-    color: rgb(248, 184, 23);
+    color:white ;
     border-radius: 12px;
 }
 
 .bunner-text .our-package:hover{
-    color:rgb(2, 4, 116);
+    color:rgb(252, 252, 252);
     background-color: rgb(248, 184, 23);
     border: 1px solid rgb(2, 4, 116);
 }
-
 /* Service */
+.service-section{
+    margin: 50px 0;
+
+}
+
+.service-section h1{
+    font-size: 45px;
+    text-align: center;
+    color: rgb(2, 4, 116);
+}
+
+.service-section h1::after,
+.destination h2::after,
+.package h2::after  {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background-color: rgb(248, 184, 23);
+    margin: 12px auto 20px;
+    border-radius: 5px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    padding: 10px 40px 10px;
+    gap: 10px;
+}
+
+.card{
+    background-color: rgba(0, 2, 84, 0.9);
+    padding: 19px 22px;
+    border-radius: 15px;
+    text-align: center;
+    transition:transform 0.2s ease;
+}
+
+.card h2{
+    font-size: 16px;
+    color: rgb(248, 184, 23);
+    margin-bottom: 3px;
+}
+
+.card p{
+    font-size: 13spx;
+    color: rgb(251, 246, 246);
+    text-align: center;
+}
+
+.card i{
+    display: block;
+    width: fit-content;
+    margin: 0 auto 15px;
+    font-size: 38px;
+    color: #f9f9f9;
+}
+
+/* popupar_destination */
+.destination{
+    padding: 0 40px 0;
+}
+
+.destination h2{
+    font-size: 35px;
+    text-align: center;
+    color: rgb(2, 4, 116);
+}
+
+
+.dest-img{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.dest-img > div{
+    transition:transform 0.2s ease;
+}
+
+.dest-img img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* package */
+.package{
+    margin: 50px 0;
+    padding: 0 40px 0;
+}
+
+.package h2{
+    font-size: 35px;
+    text-align: center;
+    color: rgb(2, 4, 116);
+}
+
+.pop-img{
+    display: grid;
+    height: 450px;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.pop-img img{
+    width: 100%;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.pop-img-card{
+    background-color: rgba(231, 231, 231, 0.7);
+    width:100%;
+    min-width:0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px rgb(118, 118, 118);
+    transition:transform 0.2s ease;
+}
+
+.pop-img-card > div{
+    padding: 15px;
+}
+
+.pop-img-card div h3{
+    font-size: 18px;
+}
+
+.pop-img-card div h3 span{
+    display: block;
+    text-align:right;
+    color:rgb(248, 184, 23);
+}
+
+.pop-img-card div p{
+    font-size: 16px;
+    word-spacing: 4px;
+}
+
+.pop-img-card div a{
+    float: right;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    border: none;
+    text-decoration: none;
+    background-color:rgb(2, 4, 116);
+    color: white;
+    transition:transform 0.2s ease;
+}
+
+.pop-img-card div a:hover{
+    transform: translateY(-3px);
+}
+
+.pop-img-card:hover,
+.dest-img > div:hover,
+.card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
