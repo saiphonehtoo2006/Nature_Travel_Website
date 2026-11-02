@@ -13,10 +13,12 @@
 body{
     background-color: whitesmoke;
 }
+
+/* Navigation_bar */
 .navbar {
     position: sticky;
     width:100%;
-    height:95px;
+    height:90px;
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -26,7 +28,7 @@ body{
 
 .navbar .nav-logo img{
     width: 90px;
-    height: 95px;
+    height: 90px;
     
 }
 .navbar .nav-links{
@@ -41,7 +43,7 @@ body{
     display: inline-block;
     text-decoration: none;
     color: rgb(0, 0, 82);
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 15px;
     border: 1px solid transparent;
     border-radius: 12px;
@@ -67,10 +69,62 @@ body{
 
 .nav-links #nav-btn:hover{
     transform: translateY(-3px);
-    background: whitesmoke;
+    background-color: rgb(248, 184, 23);
     color:rgb(0, 0, 82);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-color: rgba(0, 7, 88, 0.4);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Hero_Section */
+.bunner{
+    background-image: url("../images/N1.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+   
+}
+
+.bunner-text{
+    text-align: center;
+    color: white;
+}
+
+.bunner-text h1{
+    color:goldenrod;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.bunner-text h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    -webkit-text-stroke:1px rgba(2, 4, 116,0.3);
+}
+
+.bunner-text p{
+    font-size: 18px;
+}
+
+.bunner-text .our-package{
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color:rgb(2, 4, 116);
+    color: rgb(248, 184, 23);
+    border-radius: 12px;
+}
+
+.bunner-text .our-package:hover{
+    color:rgb(2, 4, 116);
+    background-color: rgb(248, 184, 23);
+    border: 1px solid rgb(2, 4, 116);
+}
+
+/* Service */
