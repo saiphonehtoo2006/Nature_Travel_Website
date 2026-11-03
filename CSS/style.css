@@ -24,7 +24,7 @@ body{
     justify-content:space-around;
     align-items:center;
     background-color: rgba(255, 255, 255);
-    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px -3px 7px rgba(64, 64, 64, 0.2);
     z-index: 100;
 }
 
@@ -132,19 +132,20 @@ body{
 }
 /* Service */
 .service-section{
-    margin: 50px 0;
+    margin-top: 50px;
 
 }
 
-.service-section h1{
+.service-section h2{
     font-size: 45px;
     text-align: center;
     color: rgb(2, 4, 116);
 }
 
-.service-section h1::after,
+.service-section h2::after,
 .destination h2::after,
-.package h2::after  {
+.package h2::after,
+.work-section h2::after  {
     content: "";
     display: block;
     width: 150px;
@@ -191,6 +192,7 @@ body{
 
 /* popupar_destination */
 .destination{
+    margin-top: 50px;
     padding: 0 40px 0;
 }
 
@@ -222,7 +224,7 @@ body{
 
 /* package */
 .package{
-    margin: 50px 0;
+    margin-top: 50px;
     padding: 0 40px 0;
 }
 
@@ -254,7 +256,7 @@ body{
     min-width:0;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 3px 3px 6px rgb(138, 138, 138);
+    box-shadow: 2px 2px 6px rgb(138, 138, 138);
     transition:transform 0.2s ease;
 }
 
@@ -298,4 +300,42 @@ body{
 .card:hover{
     transform: translateY(-5px);
     cursor: pointer;
+}
+/* worksection */
+.work-section{
+    background-color: rgba(212, 212, 212,0.8);
+    padding:50px;
+    margin-top: 60px;
+}
+
+.work-section h2{
+    font-size: 35px;
+    text-align: center;
+    color: rgb(2, 4, 116);
+}
+
+.work-container{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    margin: 40px 25px 0;
+}
+
+.work-section .work-container img{
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.text-work{
+    width: 45%;
+}
+
+.text-work div{
+    margin-bottom: 15px;
+}
+
+.text-work div h3{
+    margin-bottom: 10px;
 }
